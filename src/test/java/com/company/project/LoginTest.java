@@ -15,8 +15,7 @@ public class LoginTest {
 
 	@BeforeEach
 	public void setup() {
-		driver = DriverFactory.getDriver();
-		driver.get("https://www.saucedemo.com/");
+		driver = DriverFactory.initDriver();
 	}
 
 	@Test
