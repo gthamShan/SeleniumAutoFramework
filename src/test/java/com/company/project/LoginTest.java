@@ -8,6 +8,8 @@ import org.junit.jupiter.api.Test;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 
+import com.company.project.pages.LoginPage;
+
 public class LoginTest {
 	WebDriver driver;
 
@@ -19,9 +21,8 @@ public class LoginTest {
 
 	@Test
 	public void TestLogin() {
-		driver.findElement(By.id("user-name")).sendKeys("standard_user");
-		driver.findElement(By.id("password")).sendKeys("secret_sauce");
-		driver.findElement(By.id("login-button")).click();
+		LoginPage loginPage = new LoginPage(driver);
+		loginPage.login("standard_user", "secret_sauce");
 		assertEquals("Swag Labs", driver.findElement(By.cssSelector("div.app_logo")).getText());
 	}
 
