@@ -1,4 +1,4 @@
-package com.company.project;
+package tests;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
@@ -8,7 +8,8 @@ import org.junit.jupiter.api.Test;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 
-import com.company.project.pages.LoginPage;
+import core.DriverFactory;
+import pages.LoginPage;
 
 public class LoginTest {
 	WebDriver driver;

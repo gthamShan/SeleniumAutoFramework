@@ -1,4 +1,4 @@
-package com.company.project.pages;
+package pages;
 
 import java.time.Duration;
 
